@@ -1,19 +1,31 @@
 # Copilot CLI Skills Repo
 
-Local repository backup for custom Copilot CLI skills and related configuration.
+This repository stores custom Copilot CLI skills and related configuration in one place.
 
-## Included
+## Contents
 
-- `copilot/skills/`
-  - `pr-summary/SKILL.md`
-  - `security-remediation-pr/SKILL.md`
-- `copilot/config/`
-  - `config.json`
-  - `mcp-config.json`
-  - `permissions-config.json`
-  - `settings.json`
+- `copilot/skills/pr-summary/SKILL.md`
+- `copilot/skills/security-remediation-pr/SKILL.md`
+- `copilot/config/config.json`
+- `copilot/config/mcp-config.json`
+- `copilot/config/permissions-config.json`
+- `copilot/config/settings.json`
+
+## Install the skills locally
+
+Run the installer to copy the skills into your local Copilot directory:
+
+```bash
+./install-skills.sh
+```
+
+By default, the script installs into `~/.copilot/skills`. You can pass a different destination path as the first argument:
+
+```bash
+./install-skills.sh "$HOME/.copilot/skills"
+```
 
 ## Notes
 
-- Review config files before publishing this repo to GitHub.
+- Review config files before publishing this repo.
 - Keep the repository private if configs contain account-specific settings.
